@@ -1,7 +1,7 @@
 //Author Name: Sally Ellison
 //Date: 5/14/20
 //Program Name: Ellison_Drone
-//Purpose: Simulation using button, drone movement in x, y,z location
+//Purpose: Simulation using button, drone movement in x,y,z location
 
 package module_1;
 
