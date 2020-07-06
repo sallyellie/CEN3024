@@ -1,9 +1,9 @@
 // Author Name: Sally Ellison
 // Date: 5/15/20
 // Program Name: Ellison_Text_Analyzer
-// Purpose: Analyze text
+// Purpose: Analyze text through GUI
 
-package module_7;
+package module_8;
 
 import java.util.Arrays;
 
@@ -20,7 +20,7 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 
-public class TextAnalyzerView extends BorderPane
+public class EllisonTextAnalyzerView extends BorderPane
 {
     private VBox mainTopLayoutVbox = new VBox();
     
@@ -49,7 +49,7 @@ public class TextAnalyzerView extends BorderPane
 
     private TextArea resultsTextArea = new TextArea();
     
-    public TextAnalyzerView()
+    public EllisonTextAnalyzerView()
     {
         setupUI();
     }

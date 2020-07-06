@@ -1,9 +1,9 @@
 // Author Name: Sally Ellison
 // Date: 5/15/20
 // Program Name: Ellison_Text_Analyzer
-// Purpose: Analyze text
+// Purpose: Analyze text through GUI
 
-package module_7;
+package module_10;
 
 import java.io.File;
 import java.util.List;
@@ -32,12 +32,12 @@ public class EllisonTextAnalyzerController
     
     private String pathToFile;
 
-    private final Ellison_Text_Analyzer analyzer = new Ellison_Text_Analyzer();
+    private final EllisonTextAnalyzer analyzer = new EllisonTextAnalyzer();
     
     
     private final FileChooser fileChooser = new FileChooser();
 
-    public EllisonTextAnalyzerController(final TextAnalyzerView textAnalyzerView, final Stage stage)
+    public EllisonTextAnalyzerController(final EllisonTextAnalyzerView textAnalyzerView, final Stage stage)
     {
         this.stage = stage;
 
@@ -54,6 +54,7 @@ public class EllisonTextAnalyzerController
     public void actionListeners()
     {
         
+        // Opens file selector to select file to be read
         fileSelectButton.setOnMouseClicked(e -> 
         {
             final File file = fileChooser.showOpenDialog(stage);
@@ -64,6 +65,8 @@ public class EllisonTextAnalyzerController
             }
         });
 
+        // When the analyze button is clicked, determine the parameters
+        // selected and analyze given those parameters
         analyzeButton.setOnMouseClicked(e -> 
         {
             List<EllisonWordStat> statList;
@@ -73,14 +76,12 @@ public class EllisonTextAnalyzerController
             final String selectedRadioButtonText = selectedRadioButton.getText();
             if (selectedRadioButtonText.equals("Descending"))
             {
-                analyzer.analyzeFile(pathToFile, false);
+                statList = analyzer.analyzeFile(pathToFile, false);
             }
             else
             {
-                analyzer.analyzeFile(pathToFile, true);
+                statList = analyzer.analyzeFile(pathToFile, true);
             }
-
-            statList = analyzer.getResults();
 
             List<EllisonWordStat> trimmedList;
 

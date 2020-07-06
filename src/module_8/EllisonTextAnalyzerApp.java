@@ -1,15 +1,15 @@
 // Author Name: Sally Ellison
 // Date: 5/15/20
 // Program Name: Ellison_Text_Analyzer
-// Purpose: Analyze text
+// Purpose: Analyze text through GUI
 
-package module_7;
+package module_8;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-public class Ellison_Text_Analyzer_App extends Application
+public class EllisonTextAnalyzerApp extends Application
 {
 
     public static void main(String args[])
@@ -20,7 +20,7 @@ public class Ellison_Text_Analyzer_App extends Application
     @Override
     public void start(Stage stage) throws Exception
     {
-        TextAnalyzerView textAnalyzerView = new TextAnalyzerView();
+        EllisonTextAnalyzerView textAnalyzerView = new EllisonTextAnalyzerView();
         EllisonTextAnalyzerController textAnalyzerController = new EllisonTextAnalyzerController(textAnalyzerView, stage);
 
         // create a scene

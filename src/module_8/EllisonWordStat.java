@@ -1,10 +1,10 @@
 // Author Name: Sally Ellison
 // Date: 5/15/20
 // Program Name: Ellison_Text_Analyzer
-// Purpose: Analyze text
+// Purpose: Analyze text through GUI
+package module_8;
 
-package module_7;
-
+// Object for hold a word and its frequency
 public class EllisonWordStat implements Comparable<EllisonWordStat>
 {
     private String word;
